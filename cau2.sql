@@ -74,6 +74,6 @@ SELECT TIMESTAMPDIFF(MICROSECOND, @start, NOW()) AS time_without_index;
 -- kết quả là 0 nghĩa là Insert 1000 dòng (ko có index) chỉ mất có chút thời gian cực kì nhỏ
 
 -- Nhận xét:
--- Index giúp tăng tốc độ truy vấn dữ liệu, đặc biệt với bảng lớn.
--- Tuy nhiên, nó làm giảm hiệu năng ghi dữ liệu do phải tạo mới, cập nhật index.
--- Nên cơ bản thì vẫn phải cân nhắc sử dụng index phù hợp tùy theo mục đích (đọc nhiều hay ghi nhiều).
+-- Index giúp tăng tốc độ truy vấn dữ liệu, đặc biệt với bảng lớn
+-- Tuy nhiên, nó làm giảm hiệu năng ghi dữ liệu do phải tạo mới, cập nhật index liên tục
+-- Nên cơ bản thì vẫn phải cân nhắc sử dụng index phù hợp tùy theo mục đích (đọc hay ghi nhiều)
